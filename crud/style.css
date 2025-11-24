@@ -1,0 +1,107 @@
+/* Contenedor general */
+.login-container {
+    width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f0f4ff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    font-family: Arial, sans-serif;
+}
+
+/* Títulos */
+.login-container h2, .login-container h3 {
+    text-align: center;
+    color: #1e2869;
+    margin-bottom: 20px;
+}
+
+/* Labels */
+.login-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #1e2869;
+}
+
+/* Inputs */
+.login-container input[type="text"],
+.login-container input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Quitar flechitas del input number */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Botones CRUD en fila */
+.crud-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Estilo de los botones */
+.crud-buttons button {
+    flex: 1;
+    margin: 0 5px;
+    padding: 10px;
+    background-color: #1e2869;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.crud-buttons button:hover {
+    background-color: #3b4bb3;
+}
+
+/* Tabla de libros */
+#bookTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#bookTable th, #bookTable td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+#bookTable th {
+    background-color: #1e2869;
+    color: white;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .login-container {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    .crud-buttons {
+        flex-direction: column;
+    }
+    
+    .crud-buttons button {
+        margin: 5px 0;
+    }
+}
